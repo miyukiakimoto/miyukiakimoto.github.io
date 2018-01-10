@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AKIMOTO MIYUKI PORTFOLIO SITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <h1>AKIMOTO MIYUKI PORTFOLIO SITE</h1>
+        
+        <p>PHOTO / GRAPHIC / OTHER</p>
+    </div>
+</header>
+
+<div class="profile">
+   <img src="img/profile.png" alt="profile">
+    <h2>PROFILE</h2>
+    <h3>秋本 美幸</h3>
+    <p>1997生まれ。現在は和光大学在学。<br>
+    グラフィックデザインを主に勉強中。<br>
+    趣味は写真。<br>
+    来年からは写真を勉強したいと考え中。<br>
+    よろしくお願いします。</p>
+</div>
+
+<div class="works">
+    <h2>WORKS</h2>
+    <p>これまでの制作事例を紹介</p>
+
+    <div class="works-container">
+        <div class="PHOTO">
+            <h3>PHOTO</h3>
+            <a href="https://hdhsv04.wixsite.com/miyukiakimoto"><img src="img/PHOTO.png" alt="PHOTO"></a>
+            <p>写真（フィルム・一眼レフ）</p>
+        </div>
+
+        <div class="GRAPHIC">
+            <h3>GRAPHIC</h3>
+            <img src="img/GRAPHIC.png" alt="GRAPHIC">
+            <p>ゼミ</p>
+        </div>
+
+        <div class="OTHER">
+            <h3>OTHER</h3>
+            <img src="img/OTHER.png" alt="OTHER">
+            <p>その他</p>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>copyright.,  https://hdhsv04.wixsite.com/miyukiakimoto  </p>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+    var fadeContent = $('.works').offset().top;
+    var winH = $(window).height();
+    var fadePoint = fadeContent - winH;
+
+    $(window).scroll(function(){
+        // スクロール値
+        var dy = $(this).scrollTop();// Y座標
+
+        if(dy >= fadePoint){
+            $('.graphic').addClass('fade-in-up');
+            $('.motion').addClass('fade-in-up');
+            $('.web').addClass('fade-in-up');
+        }
+    });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
